@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>FLORICULTURA</title>
 </head>
 <body>
@@ -36,13 +35,13 @@
 
             <div class="tab-header text-center">
               <p class="p1">Catálogo</p>
-              <h3>Flores</h3>
+              <h3>FLORES</h3>
             </div>
 
             <div class="row gy-5">
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <a href="../assets/imagens/flor1.jpg" class="glightbox"><img src="../assets/imagens/flor1.jpg" class="menu-img img-fluid" alt=""></a>
                 <h4>Magnam Tiste</h4>
                 <p class="ingredients">
                   Lorem, deren, trataro, filede, nerada
@@ -53,8 +52,8 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Aut Luia</h4>
+                <a href="../assets/imagens/tulipa.jpg" class="glightbox"><img src="../assets/imagens/tulipa.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Tulipas brancas</h4>
                 <p class="ingredients">
                   Lorem, deren, trataro, filede, nerada
                 </p>
@@ -64,8 +63,8 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Est Eligendi</h4>
+                <a href="../assets/imagens/buque.jpg" class="glightbox"><img src="../assets/imagens/buque.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Buquê de rosas</h4>
                 <p class="ingredients">
                   Lorem, deren, trataro, filede, nerada
                 </p>

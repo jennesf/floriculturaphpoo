@@ -14,12 +14,12 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
         //cadastrar o usuário
         if ($usuario->cadastrar($nome, $email, $senha)) {
             // Redirecionar para a página de sucesso após o cadastro
-            header("Location: cadastrar-usuario-sucesso.php");
+            header("Location: ../visivel/cadastrar-usuario-sucesso.php");
             exit();
         } else {
             echo "erro! tente novamente!";
         }
     }else{
-        header("Location: cadastro.php?erro=1");
+        header("Location: ../visivel/cadastro.php?erro=1");
     } 
 }

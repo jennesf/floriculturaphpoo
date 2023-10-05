@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>FLORICULTURA</title>
 </head>
 <body>
@@ -22,7 +21,7 @@
    <main class="menu">
     
    <div class="form">
-   <form method="post" action="../processar-cadastro.php">
+   <form method="post" action="../processadores/processar-cadastro.php">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" 
             placeholder="Digite seu nome" required>

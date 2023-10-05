@@ -11,11 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] =="POST"){
     if ($usuario){
         session_start();
         $_SESSION["usuario"] = $usuario;
-        header("Location: index.php");
+        header("Location: ../visivel/index.php");
         exit;
     }else{
 
-        header("Location: login.php?erro=1");
+        header("Location: ../visivel/login.php?erro=1");
     }
 }
 ?>
