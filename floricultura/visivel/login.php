@@ -13,7 +13,6 @@
           <li><a class="index.php" href="index.php">home</a></li>
           <li><a href="#">login</a></li>
           <li><a href="cadastro.php">cadastro</a></li>
-          <li><a href="contato.php">contato</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

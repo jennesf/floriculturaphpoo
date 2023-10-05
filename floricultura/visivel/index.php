@@ -4,7 +4,6 @@ if (!isset($_SESSION["usuario"])) {
     header("Location: login.php");
     exit;
 }
-include 'menu.php';
 include '../processadores/conexao.php';
 
 ?>
@@ -17,20 +16,25 @@ include '../processadores/conexao.php';
     <title>FLORICULTURA</title>
 </head>
 <body>
-    <header class="cbl">
+    <header class="cbl">  
     <nav id="navbar" class="navbar order-last order-lg-0">
+      <div class="container">
         <ul>
           <li><a class="#" href="index.php">home</a></li>
           <li><a href="login.php">login</a></li>
           <li><a href="cadastro.php">cadastro</a></li>
-          <li><a href="contato.php">contato</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-    </header>
-   <main class="menu">
+      </div>
     
-   </main>
+        
+    
+      </nav><!-- .navbar -->
+      <?php 
+      include 'menu.php';
+      ?>
+
+    </header>
    <section id="menu1" class="menu1">
       <div class="container" data-aos="fade-up">
 
@@ -52,56 +56,44 @@ include '../processadores/conexao.php';
 
               <div class="col-lg-4 menu-item">
                 <a href="../assets/imagens/flor1.jpg" class="glightbox"><img src="../assets/imagens/flor1.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Magnam Tiste</h4>
+                <h4>Flor branca</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  
                 </p>
                 <p class="price">
-                  $5.95
+                  R$10,00
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="../assets/imagens/tulipa.jpg" class="glightbox"><img src="../assets/imagens/tulipa.jpg" class="menu-img img-fluid" alt=""></a>
                 <h4>Tulipas brancas</h4>
-                <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
-                </p>
                 <p class="price">
-                  $14.95
+                  R$30,00
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="../assets/imagens/buque.jpg" class="glightbox"><img src="../assets/imagens/buque.jpg" class="menu-img img-fluid" alt=""></a>
                 <h4>Buquê de rosas</h4>
-                <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
-                </p>
                 <p class="price">
-                  $8.95
+                  R$300,00
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
                 <a href="../assets/imagens/flor4.jpg" class="glightbox"><img src="../assets/imagens/flor4.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
-                <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
-                </p>
+                <h4>Flor veludo</h4>
                 <p class="price">
-                  $12.95
+                  R$150,00
                 </p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
-                <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
-                </p>
+                <a href="../assets/imagens/flor5.jpg" class="glightbox"><img src="../assets/imagens/flor5.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Flores de Margarida</h4>
                 <p class="price">
-                  $12.95
+                  R$90,00
                 </p>
               </div><!-- Menu Item -->
 
