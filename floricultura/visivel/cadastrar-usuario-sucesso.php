@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>IFSP - Cadastrar Usuário</title>
+    <title>Cadastrar Usuário</title>
 </head>
 <body>
-<main>
+<main class="menu2">
     <section class="container-admin-banner">
         <h1 class="cadastro">Cadastro realizado com sucesso</h1>
     </section>
     <section class="container-form">
         <form action="login.php" method="post">                      
             <input type="submit" name="login" 
-            class="botao-cadastro" value="login"/>
+            class="botao-cadastro2" value="login"/>
         </form>
 
     </section>

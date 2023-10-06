@@ -445,3 +445,38 @@ form input:focus{
   background-color: #ffa3a3c9;
 
 }
+.menu2{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  }
+  .botao-cadastro2{
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 70px;
+    border-radius: 50px;
+    border: none;
+    transition: 0.5s;
+    color: #fff;
+    background: rgba(91, 116, 75, 1);
+    width: 100%;
+    margin: 30px auto 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .botao-cadastro2:hover {
+    background: rgba(243, 186, 186, 1);
+  }
+  .menu2 h1{
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
