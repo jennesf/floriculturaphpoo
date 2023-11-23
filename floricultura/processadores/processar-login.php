@@ -10,9 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] =="POST"){
     $usuario = $login->verificarUsuario($email, $senha);
     if ($usuario){
         session_start();
-        $_SESSION["usuario"] = $usuario;
+        $_SESSION["usuario"] = true;
+        $_SESSION["nomeusuario"] = $usuario["nome"];
+        $_SESSION["menu"] = true;
         header("Location: ../visivel/index.php");
-        exit;
+        exit();
     }else{
 
         header("Location: ../visivel/login.php?erro=1");

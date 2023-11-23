@@ -23,7 +23,13 @@ include '../processadores/conexao.php';
           <li><a class="#" href="index.php">home</a></li>
           <li><a href="login.php">login</a></li>
           <li><a href="cadastro.php">cadastro</a></li>
-          <li><a href="cadastrar-produto.php">cadastro de produtos</a></li>
+          <form id="adminForm" action="admin.php" method="POST" style="display: none;">
+
+                    <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']; ?>">
+                    <input type="hidden" name="nomeusuario" value="<?= $_SESSION['nomeusuario']; ?>">
+                </form>
+          <li><a href="admin.php"  onclick="enviarParaAdmin();">admin</a></li>
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </div>
@@ -101,4 +107,21 @@ include '../processadores/conexao.php';
     </section><!-- End Menu Section -->
     <footer class="rodape"></footer>
 </body>
+<script>
+        function enviarParaAdmin() {
+            document.getElementById('adminForm').submit();
+        }
+</script>
+<script>
+
+        function voltar() {
+            window.history.back(); // Isso retorna para a página anterior no histórico do navegador
+        }
+    </script>
+    <script>
+        function enviarParaInicio() {
+            document.getElementById('inicioForm').submit();
+        }
+    </script>
+
 </html>

@@ -17,10 +17,6 @@ class ProdutoRepositorio
     }
     
 
-
-
-
-
     public function listarFlores()
     {
         $sql = "SELECT * FROM produtos ORDER BY preco";
