@@ -41,8 +41,30 @@
       </nav><!-- .navbar -->
     </header>
    <main class="menu2">
-        <h1>Cadastro de Produtos</h1> 
-    <div class="form">
+        <h1>Cadastro de Produtos</h1>
+        <section class="container-form">
+            <form action="../processadores/processar-produtos.php" method="POST" enctype="multipart/form-data">
+
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nomeP" placeholder="Digite o nome do produto" required>
+                <div class="container-radio">
+                    <div>
+                        <label for="flor">Flor</label>
+                        <input type="radio" id="cafe" name="tipo" value="Flor" checked>
+                    </div>
+                </div>
+                <label for="preco">Preço</label>
+                <input type="text" id="preco" name="preco" placeholder="Digite um preço" required>
+
+                <label for="imagem">Envie uma imagem do produto</label>
+                <input type="file" name="imagem" accept="image/*" id="imagem" placeholder="Envie uma imagem">
+            
+                <input type="submit" name="cadastro" class="botao-cadastrar" value="Cadastrar produto" />
+
+            </form>
+
+        </section>
+    <!-- <div class="form">
         <form action="../processadores/processar-produtos.php" method="POST">
             <label for="imagem">Envie uma imagem do produto</label>
             <input type="file" name="imagem" accept="image/*" id="imagem" placeholder="Envie uma imagem">
@@ -56,7 +78,7 @@
             <input type="submit" name="cadastro" class="botao-cadastro" value="Cadastrar produto"/>
         </form>
     
-</div>
+</div> -->
 </main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>

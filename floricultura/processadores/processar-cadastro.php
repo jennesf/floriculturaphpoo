@@ -1,6 +1,7 @@
 <?php
 include 'conexao.php';
-include 'Usuario.php';
+include '..\Modelo\Usuario.php';
+include '..\Repositorio\UsuarioRepositorio.php';
 
 if (($_SERVER["REQUEST_METHOD"] == "POST")) {
     $nome = $_POST["nome"];
@@ -10,9 +11,15 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
 
     if ($senha === $confirmarsenha) {
         //conexão com o banco de dados;
-        $usuario = new Usuario($conn);
+        $usuario = new Usuario(0,
+        $nome,
+        $email,
+        $senha,
+        );
+        $usuarioRepositorio = new UsuarioRepositorio($conn);
+
         //cadastrar o usuário
-        if ($usuario->cadastrar($nome, $email, $senha)) {
+        if ($usuarioRepositorio->cadastrar($usuario)) {
             // Redirecionar para a página de sucesso após o cadastro
             header("Location: ../visivel/cadastrar-usuario-sucesso.php");
             exit();

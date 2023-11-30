@@ -5,6 +5,7 @@
             <div class="user-photo">
                 <img src="../assets/imagens/imgusuario.jpg" alt="Foto do Usuário">
             </div>
+            
         </div>
     </div>
     <script>

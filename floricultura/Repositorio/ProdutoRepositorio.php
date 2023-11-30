@@ -37,5 +37,25 @@ class ProdutoRepositorio
 
         return $produtos;
     }
-    
+    public function buscarTodos()
+    {
+        $sql = "SELECT * FROM produtos ORDER BY tipo, preco";
+        $result = $this->conn->query($sql);
+
+        $produtos = array();
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $produto = new Produto(
+                    $row['imagem'],
+                    $row['nome'],
+                    $row['preço']
+                    
+                );
+                $produtos[] = $produto;
+            }
+        }
+
+        return $produtos;
+    }
 }

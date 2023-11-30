@@ -1,18 +1,18 @@
 <?php
 
 class Produto {
+    private string $id;  
       
     private string $imagem;    
     private string $nome;    
     private float $preco;
     
     public function __construct(?int $id,
-                                string $imagem, 
+                             
                                 string $nome, 
                                 float $preco)
     {
         $this->id = $id;
-        $this->tipo = $imagem;
         $this->nome = $nome;
         $this->preco = $preco;
     }
@@ -31,6 +31,7 @@ class Produto {
 
         return $this;
     }
+    
 
     /** Get the value of imagem
     */
@@ -38,16 +39,20 @@ class Produto {
    {
        return $this->imagem;
    }
+   public function getImagemDiretorio(): string
+    {
+        return "../img/".$this->imagem;
+    }
 
    /**
     * Set the value of imagem
     */
-   public function setImagem(string $imagem): self
-   {
-       $this->imagem = $imagem;
+    public function setImagem(string $imagem): void
+    {
+        $this->imagem = $imagem;
 
-       return $this;
-   }
+       
+    }
    /** Get the value of nome
      */
     public function getNome(): string
@@ -83,6 +88,7 @@ class Produto {
 
        return $this;
    }
+
 }
 ?>
    

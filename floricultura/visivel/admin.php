@@ -1,16 +1,15 @@
 <!doctype html>
 <?php
-// Verifica se os dados foram recebidos via POST
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  
-  // Configura as variáveis de sessão, se necessário
-  $_SESSION['usuario'] = $_POST['usuario'];
-  $_SESSION['nomeusuario'] = $_POST['nomeusuario'];
-} else {
-  $usuario = $_POST['usuario'];
-  header("Location: login.php?erro=$usuario");
-  exit;
-}
+//   $_SESSION['usuario'] = $_POST['usuario'];
+//   $_SESSION['nomeusuario'] = $_POST['nomeusuario'];
+// } else {
+//   $usuario = $_POST['usuario'];
+//   header("Location: login.php?erro=$usuario");
+//   exit;
+// }
 require_once 'menu.php';
 require "..\processadores\Autenticacao.php";
 
@@ -43,3 +42,54 @@ $produtos = $produtoRepositorio->buscarTodos();
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </div>
+  <main>
+    <h2>Lista de Produtos</h2>
+    <?php if (isset($_POST['codcad'])) { ?>
+      <label for="codigo">Produto cadastrado com sucesso!</label>
+    <?php } ?>
+    <section class="container-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Valor</th>
+            <th colspan="2">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($produtos as $produto) : ?>
+            <tr>
+              <td><?= $produto->getNome(); ?></td>
+              <td>R$<?= $produto->getPreco(); ?></td>
+              <td>
+                <form action="editar-produto.php" method="POST">
+                  <input type="hidden" name="nomeusuario" value="<?= $_SESSION['nomeusuario']; ?>">
+                  <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']; ?>">
+                  <input type="submit" class="botao-editar" value="Editar">
+                </form>
+
+              </td>
+              <td>
+                <form action="excluir-produto.php" method="POST">
+                  <input type="hidden" name="nomeusuario" value="<?= $_SESSION['nomeusuario']; ?>">
+                  <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']; ?>">
+                  <input type="submit" class="botao-excluir" value="Excluir">
+                </form>
+              </td>
+            </tr>
+            <?php endforeach; ?>
+
+        </tbody>
+      </table>
+            <form action="cadastrar-produto.php" method="POST">
+              <input type="hidden" name="nomeusuario" value="<?= $_SESSION['nomeusuario']; ?>">
+              <input type="hidden" name="usuario" value="<?= $_SESSION['usuario']; ?>">
+              <input type="submit" class="botao-cadastrar" name="cadastrar" value="Cadastrar produto">
+            </form>
+      <form action="#" method="post">
+        <input type="submit" class="botao-cadastrar" value="Baixar Relatório" />
+      </form>
+          </section>
+      </main>
+</body>
+</html>
